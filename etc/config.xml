@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <weatherwidget>
+            <general>
+                <enable>1</enable>
+                <api_key>2e6046c47eee4ba3b1f15251231002</api_key>
+                <api_url>http://api.weatherapi.com/v1/current.json</api_url>
+            </general>
+        </weatherwidget>
+    </default>
+</config>

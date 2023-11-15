@@ -1,0 +1,45 @@
+.weather-widget-wrapper {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border: solid 0.5px #c0c0c0;
+    padding: 0 5px;
+    border-radius: 8px;
+    background: #f0f0f9;
+    position: relative;
+    float: right;
+    min-height: 32px;
+}
+
+.weather-widget-wrapper>div{
+    display: flex;
+    align-items: center;
+}
+
+.weather-condition {
+    display: flex;
+    align-items: center;
+    max-width: 30px;
+}
+
+.weather-desc-box {
+    padding: 0 5px;
+    display: flex;
+}
+
+.weather-desc-box div {
+    padding-right: 5px;
+}
+
+.weather-desc-box div::before {
+    content: '|';
+    position: relative;
+    top: -2px;
+}
+
+@media only screen and (max-width: 520px) {
+    .weather-desc-box {
+        padding: 0px;
+        display: flex;
+    }
+}

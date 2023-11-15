@@ -1,0 +1,28 @@
+{
+  "name": "freddev/weatherwidget",
+  "description": "Weather widget in header",
+    "require": {
+    "magepow/core": "^1.0.0"
+  },
+  "type": "magento2-module",
+  "license": [
+      "OSL-3.0",
+      "AFL-3.0"
+  ],
+  "authors": [
+    {
+      "name": "Freddev",
+      "email": "fmahumada@gmail.com",
+      "homepage": "https://github.com/fred-fd",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+      "files": [
+          "registration.php"
+      ],
+      "psr-4": {
+          "Freddev\\WeatherWidget\\": ""
+      }
+  }
+}

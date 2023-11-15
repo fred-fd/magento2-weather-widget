@@ -1,0 +1,39 @@
+<?php
+/**
+ * \Freddev\WeatherWidget\Block\Index\Index
+ */
+if ($block->isModuleEnable()):
+?>
+<div class="weather-widget-wrapper" id="weather-widget-component">
+    <!-- ko scope: 'weatherWidgetComponent' -->
+    <div data-bind="if: loadingData">
+        <div data-bind="text: dataError"></div>
+    </div>
+    <div data-bind="ifnot: loadingData">
+        <div class="weather-condition" style="display: none">
+            <img src="" data-bind="attr: { 'src': conditionIcon }" />
+        </div>
+        <div class="weather-desc-box" style="display: none">
+            <div><?=__('City'); ?>: <b><label data-bind="text: cityName"></label></b></div>
+            <div>C°: <b><label data-bind="text: celcius"></label></b></div>
+            <div>F°: <b><label data-bind="text: farenheith"></label></b></div>
+            <div><?=__('Wind'); ?> km/h: <b><label data-bind="text: windSpeed"></label></b></div>
+        </div>
+    </div>
+
+    <!-- /ko -->
+</div>
+<? endif; ?>
+<script type="text/x-magento-init">
+    {
+        "#weather-widget-component": {
+            "Magento_Ui/js/core/app": {
+               "components": {
+                    "weatherWidgetComponent": {
+                        "component": "Freddev_WeatherWidget/js/weatherWidgetComponent"
+                    }
+                }
+            }
+        }  
+    }
+</script>
